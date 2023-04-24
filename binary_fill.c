@@ -1,37 +1,28 @@
 #include "main.h"
 
 /**
- * fill_binary_array - prints decimal in binary
- * @binary: pointer to binary
- * @int_in: input number
- * @isneg: if input number is negative
- * @limit: size of the binary
- * Return: number of chars printed.
+ * fill_long_oct_array - calculates a long octal number
+ *
+ * @bnr: array where is stored the binary.
+ * @oct: array where is stored the octal.
+ *
+ * Return: binary array.
  */
-char *fill_binary_array(char *binary, long int int_in, int isneg, int limit)
+char *fill_long_oct_array(char *bnr, char *oct)
 {
-	int i;
+	int op, i, j, ioct, limit;
 
-	for (i = 0; i < limit; i++)
-		binary[i] = '0';
-	binary[limit] = '\0';
-	for (i = limit - 1; int_in > 1; i--)
+	oct[22] = '\0';
+	for (i = 63, ioct = 21; i >= 0; i--, ioct--)
 	{
-		if (int_in == 2)
-			binary[i] = '0';
+		if (i > 0)
+			limit = 4;
 		else
-			binary[i] = (int_in % 2) + '0';
-		int_in /= 2;
+			limit = 1;
+		for (op = 0, j = 1; j <= limit; j *= 2, i--)
+			op = ((bnr[i] - '0') * j) + op;
+		i++;
+		oct[ioct] = op + '0';
 	}
-	if (int_in != 0)
-		binary[i] = '1';
-	if (isneg)
-	{
-		for (i = 0; binary[i]; i++)
-			if (binary[i] == '0')
-				binary[i] = '1';
-			else
-				binary[i] = '0';
-	}
-	return (binary);
+	return (oct);
 }
