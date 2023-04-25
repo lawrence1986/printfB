@@ -18,18 +18,18 @@ All of the following files are programs written in C:
 
 | Filengthame | Description |
 | -------- | ----------- |
-| ` _printf.c` | Printf function.|
-| ` Handle_integer.c` | Prints a char.|
-| ` Binary_convert.c` | Prints an unsigned number|
-| ` Basic_specifier.c` | Prints the value of a pointer variable|
-| ` fetch_flags.c` | Write a function calculate active flags.|
-| ` set_decimal_precision.c` | Calculates the precision for printing |
-| ` DataSize.c` | Calculates the size to cast the argument |
-| ` calcStrText.c` | Calculates the width for printing |
-| ` printHandler.c` | Prints an argument based on its type |
+| ` binary_fill.c` | Printf function.|
+| ` ev_print_func.c` | Prints a char.|
+| ` fill_hex_array.c` | Prints an unsigned number|
+| ` Print_oarray.c` | Prints the value of a pointer variable|
+| ` get_print_func.c` | Write a function calculate active flags.|
+| ` handle_buff.c ` | Calculates the precision for printing |
+| ` long_oct_array.c` | Calculates the size to cast the argument |
+| ` print_add.c` | Calculates the width for printing |
+| ` print_binary.c` | Prints an argument based on its type |
 | ` main.h` | source file for all executable prototypes for program|
-| ` commonFunctions.c` | A function that evaluates if a char is printable|
-| ` process_output.c` | A function that explicitly prints a string |
+| ` print_buf.c` | A function that evaluates if a char is printable|
+| ` print_chr.c` | A function that explicitly prints a string |
 
 
 ## Tasks

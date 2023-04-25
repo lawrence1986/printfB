@@ -7,7 +7,11 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
+<<<<<<< HEAD
 int print_reverseerse(va_list args, char *buf, unsigned int ibuf)
+=======
+int print_rev(va_list args, char *buf, unsigned int ibuf)
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 {
 	char *string;
 	unsigned int i = 0;

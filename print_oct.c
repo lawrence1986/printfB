@@ -9,8 +9,13 @@
  */
 int print_oc(va_list args, char *buf, unsigned int ibuf)
 {
+<<<<<<< HEAD
 	int int_fnput, i, isnegative, figure, first_digit;
 	char *octal, *binary;
+=======
+	int int_input, i, isnegative, count, first_digit;
+	char *oct, *binary;
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 
 	int_fnput = va_arg(args, int);
 	isnegative = 0;
@@ -27,8 +32,13 @@ int print_oc(va_list args, char *buf, unsigned int ibuf)
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = binary_array(binary, int_fnput, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
+<<<<<<< HEAD
 	octal = print_oarray(binary, octal);
 	for (first_digit = i = figure = 0; octal[i]; i++)
+=======
+	octal = Print_oarray(binary, octal);
+	for (first_digit = i = count = 0; octal[i]; i++)
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 	{
 		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;

@@ -9,9 +9,15 @@ int (*print_func(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
 		{"c", print_chr}, {"s", print_str},
+<<<<<<< HEAD
 		{"i", print_fnteger}, {"d", print_fnt},
 		{"b", print_binary}, {"u", print_unt},
 		{"o", print_oc}, {"x", print_x},
+=======
+		{"i", print_int}, {"d", print_int},
+		{"b", print_binary}, {"u", print_unt},
+		{"o", print_oct}, {"x", print_hex},
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 		{"X", print_upx}, {"S", print_usr},
 		{"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt},

@@ -25,10 +25,17 @@ int print_upx(va_list args, char *buf, unsigned int ibuf)
 		isnegative = 1;
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
+<<<<<<< HEAD
 	binary = binary_array(binary, int_fnput, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
 	hexadecimal = x_array(binary, hexadecimal, 1, 8);
 	for (first_digit = i = figure = 0; hexadecimal[i]; i++)
+=======
+	binary = binary_array(binary, int_input, isnegative, 32);
+	hexadecimal = malloc(sizeof(char) * (8 + 1));
+	hexadecimal = x_array(binary, hexadecimal, 1, 8);
+	for (first_digit = i = count = 0; hexadecimal[i]; i++)
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;

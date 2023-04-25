@@ -1,13 +1,17 @@
 #include "main.h"
 
 /**
- * print_bnr - prints decimal in binary
+ * print_binary - prints decimal in binary
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
+<<<<<<< HEAD
 int print_binary(va_list args, char *buf, unsigned int ibuf)
+=======
+int print_binary(va_list arguments, char *buf, unsigned int ibuf)
+>>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 {
 	int int_fnput, figure, i, first_one, isnegative;
 	char *binary;
