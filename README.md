@@ -21,12 +21,12 @@ All of the following files are programs written in C:
 | ` binary_fill.c` | Printf function.|
 | ` ev_print_func.c` | Prints a char.|
 | ` fill_hex_array.c` | Prints an unsigned number|
-| ` fill_oct_array.c` | Prints the value of a pointer variable|
+| ` Print_oarray.c` | Prints the value of a pointer variable|
 | ` get_print_func.c` | Write a function calculate active flags.|
 | ` handle_buff.c ` | Calculates the precision for printing |
 | ` long_oct_array.c` | Calculates the size to cast the argument |
 | ` print_add.c` | Calculates the width for printing |
-| ` print_bnr.c` | Prints an argument based on its type |
+| ` print_binary.c` | Prints an argument based on its type |
 | ` main.h` | source file for all executable prototypes for program|
 | ` print_buf.c` | A function that evaluates if a char is printable|
 | ` print_chr.c` | A function that explicitly prints a string |

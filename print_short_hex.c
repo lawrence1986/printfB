@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * prinhhex - prints a short decimal in hexadecimal
+ * printhx - prints a short decimal in hexadecimal
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int prinhhex(va_list args, char *buf, unsigned int ibuf)
+int printhx(va_list args, char *buf, unsigned int ibuf)
 {
 	short int int_input, i, isnegative, figure, first_digit;
 	char *hexadecimal, *binary;
