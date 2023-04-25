@@ -14,15 +14,15 @@ int print_integer(va_list args, char *buf, unsigned int ibuf)
 
 	int_input = va_arg(args, int);
 	isneg = 0;
-	if (int_fnput < 0)
+	if (int_input < 0)
 	{
-		int_fn = int_fnput * -1;
+		int_fn = int_input * -1;
 		ibuf = handl_buf(buf, '-', ibuf);
 		isneg = 1;
 	}
 	else
 	{
-		int_fn = int_fnput;
+		int_fn = int_input;
 	}
 
 	int_temp = int_fn;

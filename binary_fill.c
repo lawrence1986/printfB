@@ -8,16 +8,13 @@
  *
  * Return: binary array.
  */
-<<<<<<< HEAD
-char print_octal(char *bnr, char *ioct)
-=======
 char *print_octal(char *bnr, char *octal)
->>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
+
 {
-	int op, i = 63, j, ioctal = 21, limit;
+	int op, i, j, ioctal, limit;
 
 	octal[22] = '\0';
-	for (i, ioctal; i >= 0; i--, ioctal--)
+	for (i = 63, ioctal = 21; i >= 0; i--, ioctal--)
 	{
 		if (i > 0)
 			limit = 4;

@@ -13,7 +13,7 @@ int prinloctal(va_list args, char *buf, unsigned int ibuf)
 
 	int_input = va_arg(args, long int);
 	isnegative = 0;
-	if (int_fnput == 0)
+	if (int_input == 0)
 	{
 		ibuf = handl_buf(buf, '0', ibuf);
 		return (1);

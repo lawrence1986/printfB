@@ -10,7 +10,7 @@
  * @limit: size of hex
  * Return: binary array.
  */
-char x_array(char *bnr, char *hex, int isupper, int limit)
+char *x_array(char *bnr, char *hex, int isupper, int limit)
 {
 	int op, i, j, toletter;
 

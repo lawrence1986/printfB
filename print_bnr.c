@@ -7,34 +7,27 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
-<<<<<<< HEAD
-<< << < HEAD
-int print_binary(va_list arguments, char *buf, unsigned int ibuf)
-=======
-int print_binary(va_list arguments, char *buf, unsigned int ibuf)
->> >>7c23f318f3087267af2e97c04c3a611a9bdc974f
-=======
 int print_binary(va_list args, char *buf, unsigned int ibuf)
 
->>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
+
 {
-	int int_fnput, figure, i, first_one, isnegative;
+	int int_input, figure, i, first_one, isnegative;
 	char *binary;
 
-	int_fnput = va_arg(arguments, int);
+	int_input = va_arg(args, int);
 	isnegative = 0;
-	if (int_fnput == 0)
+	if (int_input == 0)
 	{
 		ibuf = handl_buf(buf, '0', ibuf);
 		return (1);
 	}
-	if (int_fnput < 0)
+	if (int_input < 0)
 	{
-		int_fnput = (int_fnput * -1) - 1;
+		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = binary_array(binary, int_fnput, isnegative, 32);
+	binary = binary_array(binary, int_input, isnegative, 32);
 	first_one = 0;
 	for (figure = i = 0; binary[i]; i++)
 	{

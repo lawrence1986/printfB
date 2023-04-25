@@ -13,9 +13,6 @@ int prinhoctal(va_list args, char *buf, unsigned int ibuf)
 	short int int_input, i, isnegative, figure, first_digit;
 	char *octal, *binary;
 
-	short int int_input, i, isnegative, count, first_digit;
-	char *octal, *binary;
-
 
 	int_input = va_arg(args, int);
 	isnegative = 0;
@@ -37,11 +34,6 @@ int prinhoctal(va_list args, char *buf, unsigned int ibuf)
 	octal = fill_short_octal_array(binary, octal);
 	for (first_digit = i = figure = 0; octal[i]; i++)
 
-	binary = binary_array(binary, int_input, isnegative, 16);
-	octal = malloc(sizeof(char) * (6 + 1));
-	octal = fill_short_octal_array(binary, octal);
-	for (first_digit = i = figure = 0; octal[i]; i++)
-
 	{
 		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;
@@ -51,7 +43,7 @@ int prinhoctal(va_list args, char *buf, unsigned int ibuf)
 			ibuf = handl_buf(buf, octal[i], ibuf);
 			figure++;
 
-			ibuf = handl_buf(buf, octalr[i], ibuf);
+			ibuf = handl_buf(buf, octal[i], ibuf);
 			figure++;
 
 		}
