@@ -27,11 +27,11 @@ int prinhupx(va_list args, char *buf, unsigned int ibuf)
 	}
 
 	binary = malloc(sizeof(char) * (16 + 1));
-<<<<<<< HEAD
+
 	binary = binary_array(binary, int_fnput, isnegative, 16);
-=======
-	binary = binary_array(binary, int_input, isnegative, 16);
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+
+	binary = binary_array(binary, int_fnput, isnegative, 16);
+
 	hexadecimal = malloc(sizeof(char) * (4 + 1));
 	hexadecimal = x_array(binary, hexadecimal, 1, 4);
 

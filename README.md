@@ -24,7 +24,7 @@ All of the following files are programs written in C:
 | ` Print_oarray.c` | Prints the value of a pointer variable|
 | ` get_print_func.c` | Write a function calculate active flags.|
 | ` handle_buff.c ` | Calculates the precision for printing |
-| ` long_oct_array.c` | Calculates the size to cast the argument |
+| ` long_octal_array.c` | Calculates the size to cast the argument |
 | ` print_add.c` | Calculates the width for printing |
 | ` print_binary.c` | Prints an argument based on its type |
 | ` main.h` | source file for all executable prototypes for program|

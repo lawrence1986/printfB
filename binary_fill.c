@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_octal - calculates a long octal number
+ * print_octalal - calculates a long octalal number
  *
  * @bnr: array where is stored the binary.
- * @ioct: array where is stored the octal.
+ * @ioctal: array where is stored the octalal.
  *
  * Return: binary array.
  */
-char fill_long_oct_array(char *bnr, char *ioct)
+char *print_octal(char *bnr, char *octal)
 {
-	int op, i = 63, j, ioct = 21, limit;
+	int op, i = 63, j, ioctal = 21, limit;
 
-	oct[22] = '\0';
-	for (i, ioct; i >= 0; i--, ioct--)
+	octal[22] = '\0';
+	for (i, ioctal; i >= 0; i--, ioctal--)
 	{
 		if (i > 0)
 			limit = 4;
@@ -22,7 +22,7 @@ char fill_long_oct_array(char *bnr, char *ioct)
 		for (op = 0, j = 1; j <= limit; j *= 2, i--)
 			op = ((bnr[i] - '0') * j) + op;
 		i++;
-		octal[ioct] = op + '0';
+		octal[ioctal] = op + '0';
 	}
 	return (octal);
 }

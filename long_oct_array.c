@@ -8,7 +8,7 @@
  * @limit: size of the binary
  * Return: number of chars printed.
  */
-char *fill_binary_array(char *binary, long int int_in, int isneg, int limit)
+char *fill_binary_array(char *binary, long int int_fn, int isneg, int limit)
 {
 	int i = 0;
 
@@ -17,13 +17,13 @@ char *fill_binary_array(char *binary, long int int_in, int isneg, int limit)
 	binary[limit] = '\0';
 	for (i = limit - 1; int_fn > 1; i--)
 	{
-		if (int_in == 2)
+		if (int_fn == 2)
 			binary[i] = '0';
 		else
-			binary[i] = (int_in % 2) + '0';
-		int_in /= 2;
+			binary[i] = (int_fn % 2) + '0';
+		int_fn /= 2;
 	}
-	if (int_in != 0)
+	if (int_fn != 0)
 		binary[i] = '1';
 	if (isneg)
 	{

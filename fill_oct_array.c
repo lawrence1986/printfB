@@ -4,15 +4,12 @@
  * Print_oarray - writes the character c to stdout
  *
  * @bnr: array where is stored the binary.
- * @oct: array where is stored the octal.
+ * @octal: array where is stored the octalal.
  *
  * Return: binary array.
  */
-<<<<<<< HEAD
-char *print_oarray(char *bnr, char *octal)
-=======
-char *Print_oarray(char *bnr, char *oct)
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+
+char *Print_oarray(char *bnr, char *octal)
 {
 	int op, i, j, ioctal, limit;
 
