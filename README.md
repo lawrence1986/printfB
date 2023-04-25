@@ -16,7 +16,7 @@ This is a TEAM Project done during **Full Stack Software Engineering studies** a
 ## Files
 All of the following files are programs written in C:
 
-| Filename | Description |
+| Filengthame | Description |
 | -------- | ----------- |
 | ` _printf.c` | Printf function.|
 | ` Handle_integer.c` | Prints a char.|
@@ -54,10 +54,10 @@ All of the following files are programs written in C:
 | ` 7. The big print gives and the small print takes away
 ` | Handle the following flag characters for non-custom conversion specifiers: +, space, #|
 | ` 8. Sarcasm is lost in print
-` | Handle the following length modifiers for non-custom conversion specifiers: I, h|
+` | Handle the following lengthgth modifiers for non-custom conversion specifiers: I, h|
 | ` 9. Print some money and give it to us for the rain forests
 ` | Handle the field width for non-custom conversion specifiers.|
-| ` 10. The negative is the equivalent of the composer's score, and the print the performance
+| ` 10. The negative is the equivalengtht of the composer's score, and the print the performance
 ` | Handle the precision for non-custom conversion specifiers.|
 | ` 11. It's depressing when you're still around and your albums are out of print
 ` | Handle the 0 flag character for non-custom conversion specifiers.|

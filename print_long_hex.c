@@ -6,39 +6,39 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int prinlhex(va_list arguments, char *buf, unsigned int ibuf)
+int prinlhex(va_list args, char *buf, unsigned int ibuf)
 {
-	long int int_input, i, isnegative, count, first_digit;
+	long int int_fnput, i, isnegative, figure, first_digit;
 	char *hexadecimal, *binary;
 
-	int_input = va_arg(arguments, long int);
+	int_fnput = va_arg(args, long int);
 	isnegative = 0;
-	if (int_input == 0)
+	if (int_fnput == 0)
 	{
 		ibuf = handl_buf(buf, '0', ibuf);
 		return (1);
 	}
-	if (int_input < 0)
+	if (int_fnput < 0)
 	{
-		int_input = (int_input * -1) - 1;
+		int_fnput = (int_fnput * -1) - 1;
 		isnegative = 1;
 	}
 
 	binary = malloc(sizeof(char) * (64 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 64);
+	binary = print_barray(binary, int_fnput, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
-	hexadecimal = fill_hex_array(binary, hexadecimal, 0, 16);
-	for (first_digit = i = count = 0; hexadecimal[i]; i++)
+	hexadecimal = x_array(binary, hexadecimal, 0, 16);
+	for (first_digit = i = figure = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
 			ibuf = handl_buf(buf, hexadecimal[i], ibuf);
-			count++;
+			figure++;
 		}
 	}
 	free(binary);
 	free(hexadecimal);
-	return (count);
+	return (figure);
 }

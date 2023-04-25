@@ -8,7 +8,7 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int print_usr(va_list arguments, char *buf, unsigned int ibuf)
+int print_usr(va_list args, char *buf, unsigned int ibuf)
 {
 	unsigned char *str;
 	char *hexadecimal, *binary;
@@ -24,8 +24,8 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 			ibuf = handl_buf(buf, '\\', ibuf);
 			ibuf = handl_buf(buf, 'x', ibuf);
 			op = str[i];
-			binary = fill_binary_array(binary, op, 0, 32);
-			hexadecimal = fill_hex_array(binary, hexadecimal, 1, 8);
+			binary = binary_array(binary, op, 0, 32);
+			hexadecimal = x_array(binary, hexadecimal, 1, 8);
 			ibuf = handl_buf(buf, hexadecimal[6], ibuf);
 			ibuf = handl_buf(buf, hexadecimal[7], ibuf);
 			sum += 3;

@@ -8,12 +8,12 @@
  *
  * Return: binary array.
  */
-char *fill_oct_array(char *bnr, char *oct)
+char *print_oarray(char *bnr, char *octal)
 {
-	int op, i, j, ioct, limit;
+	int op, i, j, ioctal, limit;
 
-	oct[11] = '\0';
-	for (i = 31, ioct = 10; i >= 0; i--, ioct--)
+	octal[11] = '\0';
+	for (i = 31, ioctal = 10; i >= 0; i--, ioctal--)
 	{
 		if (i > 1)
 			limit = 4;
@@ -22,7 +22,7 @@ char *fill_oct_array(char *bnr, char *oct)
 		for (op = 0, j = 1; j <= limit; j *= 2, i--)
 			op = ((bnr[i] - '0') * j) + op;
 		i++;
-		oct[ioct] = op + '0';
+		octal[ioctal] = op + '0';
 	}
-	return (oct);
+	return (octal);
 }

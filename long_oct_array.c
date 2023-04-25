@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * fill_binary_array - prints decimal in binary
+ * binary_array - prints decimal in binary
  * @binary: pointer to binary
- * @int_in: input number
+ * @int_fn: input number
  * @isneg: if input number is negative
  * @limit: size of the binary
  * Return: number of chars printed.
  */
 char *binary_array(char *binary, long int int_fn, int isneg, int limit)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < limit; i++)
+	for (; i < limit; i++)
 		binary[i] = '0';
 	binary[limit] = '\0';
-	for (i = limit - 1; int_in > 1; i--)
+	for (i = limit - 1; int_fn > 1; i--)
 	{
 		if (int_fn == 2)
 			binary[i] = '0';

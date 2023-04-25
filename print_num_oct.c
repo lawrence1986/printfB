@@ -9,27 +9,27 @@
  */
 int printoctal(va_list args, char *buf, unsigned int ibuf)
 {
-	int int_input, i, isnegative, figure, first_digit;
+	int int_fnput, i, isnegative, figure, first_digit;
 	char *octal, *binary;
 
-	int_input = va_arg(args, int);
+	int_fnput = va_arg(args, int);
 	isnegative = 0;
-	if (int_input == 0)
+	if (int_fnput == 0)
 	{
 		ibuf = handl_buf(buf, '0', ibuf);
 		return (1);
 	}
-	if (int_input < 0)
+	if (int_fnput < 0)
 	{
-		int_input = (int_input * -1) - 1;
+		int_fnput = (int_fnput * -1) - 1;
 		isnegative = 1;
 	}
 	ibuf = handl_buf(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = print_barray(binary, int_input, isnegative, 32);
+	binary = print_barray(binary, int_fnput, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
 	octal = print_oarray(binary, octal);
-	for (first_digit = i = count = 0; octal[i]; i++)
+	for (first_digit = i = figure = 0; octal[i]; i++)
 	{
 		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;

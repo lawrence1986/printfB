@@ -7,23 +7,23 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int prinpint(va_list arguments, char *buf, unsigned int ibuf)
+int prinpint(va_list args, char *buf, unsigned int ibuf)
 {
-	int int_input;
-	unsigned int int_in, int_temp, i, div;
+	int int_fnput;
+	unsigned int int_fn, int_temp, i, div;
 
-	int_input = va_arg(arguments, int);
-	if (int_input < 0)
+	int_fnput = va_arg(arguments, int);
+	if (int_fnput < 0)
 	{
-		int_in = int_input * -1;
+		int_fn = int_fnput * -1;
 		ibuf = handl_buf(buf, '-', ibuf);
 	}
 	else
 	{
-		int_in = int_input;
+		int_fn = int_fnput;
 		ibuf = handl_buf(buf, '+', ibuf);
 	}
-	int_temp = int_in;
+	int_temp = int_fn;
 	div = 1;
 	while (int_temp > 9)
 	{
@@ -32,7 +32,7 @@ int prinpint(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = handl_buf(buf, ((int_fn / div) % 10) + '0', ibuf);
 	}
 	return (i + 1);
 }
