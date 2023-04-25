@@ -9,10 +9,10 @@
 int ev_print_func(const char *s, int index)
 {
 	print_t pr[] = {
-		{"c", print_chr}, {"s", print_str}, {"i", print_integer},
+		{"c", print_usr}, {"s", print_usr}, {"i", print_integer},
 		{"d", print_integer}, {"b", print_bnr}, {"u", print_unt},
-		{"c", print_chr}, {"s", print_str}, {"i", print_int},
-		{"d", print_int}, {"b", print_binary}, {"u", print_unt}',
+		{"c", print_chr}, {"s", print_str}, {"i", print_unt},
+		{"d", print_int}, {"b", print_binary}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_x}, {"X", print_upx},
 		{"S", print_usr}, {"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt}, {"lo", prinloctal},
