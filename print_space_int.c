@@ -7,7 +7,7 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int print_int(va_list args, char *buf, unsigned int ibuf)
+int prinsint(va_list args, char *buf, unsigned int ibuf)
 {
 	int int_input;
 	unsigned int int_fn, int_temp, i, div;

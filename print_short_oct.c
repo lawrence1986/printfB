@@ -10,7 +10,7 @@
 int prinhoct(va_list arguments, char *buf, unsigned int ibuf)
 {
 	short int int_input, i, isnegative, count, first_digit;
-	char *octal, *binary;
+	char *octr, *binary;
 
 	int_input = va_arg(arguments, int);
 	isnegative = 0;
@@ -27,15 +27,15 @@ int prinhoct(va_list arguments, char *buf, unsigned int ibuf)
 
 	binary = malloc(sizeof(char) * (16 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 16);
-	octal = malloc(sizeof(char) * (6 + 1));
-	octal = fill_short_oct_array(binary, octal);
-	for (first_digit = i = count = 0; octal[i]; i++)
+	octr = malloc(sizeof(char) * (6 + 1));
+	octr = fill_short_oct_array(binary, octal);
+	for (first_digit = i = count = 0; octr[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+		if (octr[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, octal[i], ibuf);
+			ibuf = handl_buf(buf, octr[i], ibuf);
 			count++;
 		}
 	}
