@@ -8,7 +8,7 @@
  *
  * Return: binary array.
  */
-char fill_long_oct_array(char *bnr, char *ioct)
+char print_octal(char *bnr, char *ioct)
 {
 	int op, i = 63, j, ioct = 21, limit;
 

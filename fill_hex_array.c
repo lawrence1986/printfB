@@ -5,12 +5,12 @@
  *
  * @bnr: array where is stored the binary.
  * @hex: array where is stored the hexadecimal.
- * @isupp: integer that determines if the hexadecimal array is
+ * @isupper: integer that determines if the hexadecimal array is
  * in uppercase or lowercase letter.
  * @limit: size of hex
  * Return: binary array.
  */
-char *x_array(char *bnr, char *hex, int isupper, int limit)
+char x_array(char *bnr, char *hex, int isupper, int limit)
 {
 	int op, i, j, toletter;
 

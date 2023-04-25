@@ -8,11 +8,9 @@
  *
  * Return: binary array.
  */
-<<<<<<< HEAD
-char *print_oarray(char *bnr, char *octal)
-=======
+<<< HEAD char *Print_oarray(char *bnr, char *octal) ===
 char *Print_oarray(char *bnr, char *oct)
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
 {
 	int op, i, j, ioctal, limit;
 

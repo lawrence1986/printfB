@@ -9,13 +9,12 @@
 int ev_print_func(const char *s, int index)
 {
 	print_t pr[] = {
-<<<<<<< HEAD
+< < < HEAD
 		{"c", print_chr}, {"s", print_str}, {"i", print_fnt},
 		{"d", print_fnt}, {"b", print_bnr}, {"u", print_unt},
-=======
 		{"c", print_chr}, {"s", print_str}, {"i", print_int},
 		{"d", print_int}, {"b", print_binary}, {"u", print_unt},
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+> > >		7c23f318f3087267af2e97c04c3a611a9bdc974f
 		{"o", print_oct}, {"x", print_x}, {"X", print_upx},
 		{"S", print_usr}, {"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt}, {"lo", prinloct},
@@ -39,18 +38,18 @@ int ev_print_func(const char *s, int index)
 	while (pr[i].type_args)
 	{
 		if (s[index] == pr[i].type_args[j])
-		{
+{
 			if (pr[i].type_arg[j + 1] != '\0')
 				index++, j++;
 			else
 				break;
-		}
+}
 		else
-		{
+{
 			j = 0;
 			i++;
-			index = first_index;
-		}
+index = first_index;
+}
 	}
 	return (j);
 }
