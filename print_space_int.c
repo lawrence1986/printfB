@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_int - prints int begining with space
+ * print_fnt - prints int begining with space
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer

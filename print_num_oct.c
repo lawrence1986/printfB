@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * prinnoct - print the number in octal begining with zero
+ * prinnoctal - print the number in octalal begining with zero
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int printoctal(va_list args, char *buf, unsigned int ibuf)
+int printoctalal(va_list args, char *buf, unsigned int ibuf)
 {
 	int int_fnput, i, isnegative, figure, first_digit;
-	char *octal, *binary;
+	char *octalal, *binary;
 
 	int_fnput = va_arg(args, int);
 	isnegative = 0;
@@ -26,20 +26,20 @@ int printoctal(va_list args, char *buf, unsigned int ibuf)
 	}
 	ibuf = handl_buf(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = print_barray(binary, int_fnput, isnegative, 32);
-	octal = malloc(sizeof(char) * (11 + 1));
-	octal = print_oarray(binary, octal);
-	for (first_digit = i = figure = 0; octal[i]; i++)
+	binary = binary_array(binary, int_fnput, isnegative, 32);
+	octalal = malloc(sizeof(char) * (11 + 1));
+	octalal = print_oarray(binary, octalal);
+	for (first_digit = i = figure = 0; octalal[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+		if (octalal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, octal[i], ibuf);
+			ibuf = handl_buf(buf, octalal[i], ibuf);
 			figure++;
 		}
 	}
 	free(binary);
-	free(octal);
+	free(octalal);
 	return (figure + 1);
 }

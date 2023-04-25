@@ -16,21 +16,21 @@ int prinhint(va_list args, char *buf, unsigned int ibuf)
 	isneg = 0;
 	if (int_fnput < 0)
 	{
-<<<<<<< HEAD
+
 		int_fn = int_fnput * -1;
-=======
-		int_fn = int_input * -1;
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+
+		int_fn = int_fnput * -1;
+
 		ibuf = handl_buf(buf, '-', ibuf);
 		isneg = 1;
 	}
 	else
 	{
-<<<<<<< HEAD
+
 		int_fn = int_fnput;
-=======
-		int_fn = int_input;
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+
+		int_fn = int_fnput;
+
 	}
 	int_temp = int_fn;
 	div = 1;

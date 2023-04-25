@@ -23,11 +23,11 @@ int print_usr(va_list args, char *buf, unsigned int ibuf)
 		{
 			ibuf = handl_buf(buf, '\\', ibuf);
 			ibuf = handl_buf(buf, 'x', ibuf);
-<<<<<<< HEAD
+
 			op = str[i];
-=======
+
 			op = string[i];
->>>>>>> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+
 			binary = binary_array(binary, op, 0, 32);
 			hexadecimal = x_array(binary, hexadecimal, 1, 8);
 			ibuf = handl_buf(buf, hexadecimal[6], ibuf);

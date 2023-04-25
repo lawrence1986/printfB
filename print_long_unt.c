@@ -10,7 +10,7 @@ int prinlunt(va_list args, char *buf, unsigned int ibuf)
 {
 	unsigned long int int_fn, int_temp, i, div;
 
-	int_fn = va_arg(arguments, unsigned long int);
+	int_fn = va_arg(args, unsigned long int);
 	int_temp = int_fn;
 	div = 1;
 	while (int_temp > 9)

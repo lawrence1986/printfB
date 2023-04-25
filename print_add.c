@@ -31,7 +31,7 @@ int print_add(va_list arguments, char *buf, unsigned int ibuf)
 		isnegative = 1;
 	}
 	binary = malloc(sizeof(char) * (64 + 1));
-	binary = print_barray(binary, int_fnput, isnegative, 64);
+	binary = binary_array(binary, int_fnput, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
 	hexadecimal = x_array(binary, hexadecimal, 0, 16);
 	ibuf = handl_buf(buf, '0', ibuf);

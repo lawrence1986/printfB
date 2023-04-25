@@ -9,18 +9,18 @@
  */
 int prinpint(va_list args, char *buf, unsigned int ibuf)
 {
-	int int_fnput;
+	int int_input;
 	unsigned int int_fn, int_temp, i, div;
 
-	int_fnput = va_arg(arguments, int);
-	if (int_fnput < 0)
+	int_input = va_arg(args, int);
+	if (int_input < 0)
 	{
-		int_fn = int_fnput * -1;
+		int_fn = int_input * -1;
 		ibuf = handl_buf(buf, '-', ibuf);
 	}
 	else
 	{
-		int_fn = int_fnput;
+		int_fn = int_input;
 		ibuf = handl_buf(buf, '+', ibuf);
 	}
 	int_temp = int_fn;

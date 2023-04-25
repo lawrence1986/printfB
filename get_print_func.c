@@ -9,6 +9,7 @@ int (*print_func(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_t pr[] = {
 		{"c", print_chr}, {"s", print_str},
+<<<<<<< HEAD
 << << <<< HEAD
 		{"i", print_fnteger}, {"d", print_fnt},
 		{"b", print_binary}, {"u", print_unt},
@@ -18,24 +19,35 @@ int (*print_func(const char *s, int index))(va_list, char *, unsigned int)
 		{"b", print_binary}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex},
 > >> >> >> 7c23f318f3087267af2e97c04c3a611a9bdc974f
+=======
+
+		{"i", print_integer}, {"d", print_int},
+		{"b", print_binary}, {"u", print_unt},
+		{"o", print_oc}, {"x", print_x},
+
+		{"i", print_int}, {"d", print_int},
+		{"b", print_binary}, {"u", print_unt},
+		{"o", print_octal}, {"x", print_x},
+
+>>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
 		{"X", print_upx}, {"S", print_usr},
 		{"p", print_add}, {"li", prinlint},
 		{"ld", prinlint}, {"lu", prinlunt},
-		{"lo", prinloct}, {"lx", prinlhex},
+		{"lo", prinloctal}, {"lx", prinlhex},
 		{"lX", printxd}, {"hi", prinhint},
 		{"hd", prinhint}, {"hu", prinhunt},
-		{"ho", prinhoct}, {"hx", printhx},
+		{"ho", prinhoctal}, {"hx", printhx},
 		{"hX", prinhupx}, {"#o", printoctal},
 		{"#x", printhex}, {"#X", prinnupx},
-		{"#i", print_fnteger}, {"#d", print_fnt},
+		{"#i", print_integer}, {"#d", print_int},
 		{"#u", print_unt}, {"+i", prinpint},
 		{"+d", prinpint}, {"+u", print_unt},
 		{"+o", print_oc}, {"+x", print_x},
-		{"+X", print_upx}, {" i", print_int},
-		{" d", print_int}, {" u", print_unt},
+		{"+X", print_upx}, {" i", print_fnt},
+		{" d", print_fnt}, {" u", print_unt},
 		{" o", print_oc}, {" x", print_x},
 		{" X", print_upx}, {"R", print_rot},
-		{"r", print_reverseerse}, {"%", print_prg},
+		{"r", print_reverse}, {"%", print_prg},
 		{"l", print_prg}, {"h", print_prg},
 		{" +i", prinpint}, {" +d", prinpint},
 		{"+ i", prinpint}, {"+ d", prinpint},

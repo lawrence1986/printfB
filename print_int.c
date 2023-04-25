@@ -7,12 +7,12 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
-int print_fnteger(va_list args, char *buf, unsigned int ibuf)
+int print_integer(va_list args, char *buf, unsigned int ibuf)
 {
-	int int_fnput;
+	int int_input;
 	unsigned int int_fn, int_temp, i = 0, div, isneg;
 
-	int_fnput = va_arg(arguments, int);
+	int_input = va_arg(args, int);
 	isneg = 0;
 	if (int_fnput < 0)
 	{
