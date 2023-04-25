@@ -7,12 +7,12 @@
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int prinnoct(va_list arguments, char *buf, unsigned int ibuf)
+int printoctal(va_list args, char *buf, unsigned int ibuf)
 {
-	int int_input, i, isnegative, count, first_digit;
+	int int_input, i, isnegative, figure, first_digit;
 	char *octal, *binary;
 
-	int_input = va_arg(arguments, int);
+	int_input = va_arg(args, int);
 	isnegative = 0;
 	if (int_input == 0)
 	{
@@ -26,9 +26,9 @@ int prinnoct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	ibuf = handl_buf(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 32);
+	binary = print_barray(binary, int_input, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
-	octal = fill_oct_array(binary, octal);
+	octal = print_oarray(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
 	{
 		if (octal[i] != '0' && first_digit == 0)
@@ -36,10 +36,10 @@ int prinnoct(va_list arguments, char *buf, unsigned int ibuf)
 		if (first_digit)
 		{
 			ibuf = handl_buf(buf, octal[i], ibuf);
-			count++;
+			figure++;
 		}
 	}
 	free(binary);
 	free(octal);
-	return (count + 1);
+	return (figure + 1);
 }
