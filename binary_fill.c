@@ -8,7 +8,11 @@
  *
  * Return: binary array.
  */
+<<<<<<< HEAD
+char print_octal(char *bnr, char *ioct)
+=======
 char *print_octal(char *bnr, char *octal)
+>>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
 {
 	int op, i = 63, j, ioctal = 21, limit;
 

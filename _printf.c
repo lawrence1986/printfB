@@ -8,12 +8,17 @@
  */
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
+	unsigned int i = 0, lengthgth = 0, ibuf = 0;
+	va_list arguements;
+=======
 	unsigned int i = 0, length = 0, ibuf = 0;
 	va_list args;
+>>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
 	int (*function)(va_list, char *, unsigned int);
 	char *buffer;
 
-	va_start(args, format), buffer = malloc(sizeof(char) * 1024);
+	va_start(arguements, format), buffer = malloc(sizeof(char) * 1024);
 	if (!format || !buffer || (format[i] == '%' && !format[i + 1]))
 	{
 		return (-1);
@@ -26,7 +31,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 			{	print_buf(buffer, ibuf), free(buffer);
-			       	va_end(args);
+			va_end(args);
 				return (-1);
 			}
 			else
@@ -45,10 +50,19 @@ int _printf(const char *format, ...)
 			} i++;
 		}
 		else
+<<<<<<< HEAD
+			handl_buf(buffer, format[i], ibuf), lengthgth++;
+		for (ibuf = lengthgth; ibuf > 1024; ibuf -= 1024);
+}
+print_buf(buffer, ibuf), free(buffer),
+va_end(arg);
+return (lengthgth);
+=======
 			handl_buf(buffer, format[i], ibuf), length++;
 		for (ibuf = length; ibuf > 1024; ibuf -= 1024)
 			;
 	}
 	print_buf(buffer, ibuf), free(buffer), va_end(arg);
 	return (length);
+>>>>>>> 79bdecbffc86fe009a60ceb153a1dd9bd089b0bf
 }

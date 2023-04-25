@@ -8,7 +8,7 @@
  *
  * Return: number of chars printed.
  */
-int print_add(va_list args, char *buf, unsigned int ibuf)
+int print_add(va_list arguments, char *buf, unsigned int ibuf)
 {
 	void *add;
 	long int int_fnput;
@@ -16,7 +16,7 @@ int print_add(va_list args, char *buf, unsigned int ibuf)
 	char *hexadecimal, *binary;
 	char nill[] = "(nil)";
 
-	add = (va_arg(args, void *));
+	add = (va_arg(arguments, void *));
 	if (add == NULL)
 	{
 		for (; nill[i]; i++)

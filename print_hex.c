@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * print_hex - prints a decimal in hexadecimal
+ * print_x - prints a decimal in hexadecimal
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int print_x(va_list args, char *buf, unsigned int ibuf)
+int print_x(va_list arguments, char *buf, unsigned int ibuf)
 {
 	int int_fnput, i, isnegative, figure, first_digit;
 	char *hexadecimal, *binary;
 
-	int_fnput = va_arg(args, int);
+	int_fnput = va_arg(arguements, int);
 	isnegative = 0;
 	if (int_fnput == 0)
 	{
